@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "env:init": "cp ./environments/.env.sample ./.env",
+    "deps:flush": "rm -rf node_modules && yarn install",
     "build:dev": "NODE_ENV=development next build",
     "build:prod": "NODE_ENV=production next build",
     "start:dev": "nodemon .",
@@ -23,7 +24,7 @@
     "react-dom": "^16.14.0",
     "sequelize": "^6.3.5",
     "styled-components": "^5.2.0",
-    "styled-normalize": "^8.0.7"
+    "twin.macro": "^1.12.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",

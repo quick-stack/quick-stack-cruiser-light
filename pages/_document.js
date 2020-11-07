@@ -1,8 +1,7 @@
-import Document             from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
-import { Normalize }        from 'styled-normalize';
+import Document                             from 'next/document';
+import { ServerStyleSheet }                 from 'styled-components';
 
-import GlobalStyle          from '../ui/elements/GlobalStyle';
+import GlobalStyle                          from '../ui/elements/GlobalStyle';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -13,7 +12,6 @@ export default class MyDocument extends Document {
       ctx.renderPage = () => originalRenderPage({
         enhanceApp: (App) => (props) => sheet.collectStyles(
           <>
-            <Normalize />
             <GlobalStyle />
             <App {...props} />
           </>,
