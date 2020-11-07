@@ -1,0 +1,37 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "plugin:react-hooks/recommended"],
+  "plugins": ["arca"],
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "off",
+    "key-spacing": ["error", { 
+      "align": {
+        "on": "colon", 
+        "beforeColon": true, 
+        "afterColon": true, 
+        "mode": "strict" 
+      }
+    }],
+    "no-multi-spaces": ["error", {
+      "exceptions": {
+        "ImportDeclaration": true
+      }
+    }],
+    "object-curly-newline":  ["error", {
+      "ImportDeclaration": "never",
+      "ExportDeclaration": "never",
+      "ObjectExpression": { "multiline": true },
+      "ObjectPattern": { "multiline": true }
+    }],
+    "react/jsx-props-no-spreading": "off",
+    "arca/import-align": 2,
+    "arca/newline-after-import-section": 2,
+    "arca/import-ordering": 2,
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "react/forbid-prop-types": "off",
+    "no-use-before-define": "off",
+    "react/react-in-jsx-scope": "off"
+  }
+}

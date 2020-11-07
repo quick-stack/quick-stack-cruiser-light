@@ -1,0 +1,17 @@
+# deps
+node_modules
+package-lock.json
+yarn.lock
+!/yarn.lock
+
+# environments
+.env
+.env.*
+!.env.sample
+
+# outputs
+dist
+.next
+
+# os
+.DS_Store

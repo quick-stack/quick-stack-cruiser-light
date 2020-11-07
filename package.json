@@ -1,0 +1,41 @@
+{
+  "name": "spread-sheet-db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "env:init": "cp ./environments/.env.sample ./.env",
+    "build:dev": "NODE_ENV=development next build",
+    "build:prod": "NODE_ENV=production next build",
+    "start:dev": "nodemon .",
+    "start:prod": "NODE_ENV && next start",
+    "db:reset": "sequelize db:drop && sequelize db:create && sequelize db:migrate"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
+    "chalk": "^4.1.0",
+    "color": "^3.1.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "next": "^9.5.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "sequelize": "^6.3.5",
+    "styled-components": "^5.2.0",
+    "styled-normalize": "^8.0.7"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.4.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-arca": "^0.9.5",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "nodemon": "^2.0.5",
+    "sequelize-cli": "^6.2.0"
+  }
+}
